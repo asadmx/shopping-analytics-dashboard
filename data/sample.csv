@@ -1,9 +1,0 @@
-order_id,order_date,customer_id,gender,age,category,item,quantity,price,discount_pct,shipping_type,subscription
-1,2025-01-03,C001,M,23,Clothing,Hoodie,1,55.00,10,Standard,Yes
-2,2025-01-04,C002,F,35,Beauty,Moisturizer,2,18.50,0,Express,No
-3,2025-01-05,C003,M,29,Electronics,Headphones,1,79.99,15,Standard,No
-4,2025-01-05,C001,M,23,Clothing,Socks,3,6.00,0,Standard,Yes
-5,2025-01-06,C004,F,41,Home,Blender,1,49.99,5,Express,Yes
-6,2025-01-07,C005,F,19,Beauty,Lip Balm,4,3.99,0,Standard,No
-7,2025-01-08,C006,M,52,Electronics,Mouse,2,22.00,20,Standard,Yes
-8,2025-01-08,C007,F,27,Clothing,Jacket,1,120.00,25,Express,No

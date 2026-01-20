@@ -91,4 +91,26 @@ bottom_right.plotly_chart(
 
 st.divider()
 st.subheader("Raw Rows (preview)")
-st.dataframe(fetch_df("SELECT * FROM orders ORDER BY order_date, order_id;", {}).head(50))
+
+preview_mode = st.radio(
+    "Preview order",
+    ["Earliest in range", "Latest in range"],
+    horizontal=True
+)
+
+order_dir = "ASC" if preview_mode == "Earliest in range" else "DESC"
+
+preview_sql = f"""
+SELECT *
+FROM orders
+WHERE order_date BETWEEN :start_date AND :end_date
+ORDER BY order_date {order_dir}, order_id {order_dir}
+LIMIT 50;
+"""
+
+st.dataframe(
+    fetch_df(preview_sql, {
+        "start_date": start_date,
+        "end_date": end_date
+    })
+)
